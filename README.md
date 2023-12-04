@@ -57,9 +57,6 @@ export const apps = [
 `src/index.jsx`
 
 ```jsx
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import { apps } from '../common/config';
-
 apps.forEach(({ id, Content }) => {
   const root = document.getElementById(id);
 
@@ -76,11 +73,6 @@ apps.forEach(({ id, Content }) => {
 `scripts/render.jsx`
 
 ```jsx
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-
-import { apps } from '../common/config';
-
 export const render = () => {
   return apps.map(({ id, Content }) => ({
     id,
@@ -110,9 +102,6 @@ export const render = () => {
 `src/index.jsx`
 
 ```jsx
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import { apps } from '../common/config';
-
 apps.forEach(({ id, Content }) => {
   const root = document.getElementById(id);
 
