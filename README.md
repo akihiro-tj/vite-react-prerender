@@ -97,6 +97,10 @@ export const render = () => {
 
 ボタンのクリックで表示が変わるような箇所はプリレンダリングできないため、 `<!-- -->0<!-- -->` のように書き出されます。
 
+## 4. `npm run preview`
+
+http://localhost:8080
+
 本番時は react-dom/client の `hydrateRoot` により上記の html に React アプリケーションがアタッチされ、プリレンダリングできない箇所がクライアントサイドでレンダリングされます。
 
 `src/index.jsx`
@@ -110,7 +114,3 @@ apps.forEach(({ id, Content }) => {
     : hydrateRoot(root, <Content />); // 本番時
 });
 ```
-
-## 4. `npm run preview`
-
-http://localhost:8080
