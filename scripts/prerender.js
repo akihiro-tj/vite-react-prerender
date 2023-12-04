@@ -11,7 +11,7 @@ const RENDER_FILE_PATH = path.resolve(PRJ_ROOT_PATH, 'scripts/render.jsx');
 const INDEX_FILE_PATH = path.resolve(PRJ_ROOT_PATH, 'index.html');
 const COPIED_FILE_PATH = path.resolve(PRJ_ROOT_PATH, '.index.html');
 
-const ssg = async () => {
+const prerender = async () => {
   /**
    *
    */
@@ -43,4 +43,4 @@ const ssg = async () => {
   fs.removeSync(COPIED_FILE_PATH);
 };
 
-ssg();
+prerender();
