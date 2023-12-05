@@ -11,6 +11,8 @@ const RENDER_FILE_PATH = path.resolve(PRJ_ROOT_PATH, 'scripts/render.jsx');
 const INDEX_FILE_PATH = path.resolve(PRJ_ROOT_PATH, 'index.html');
 const COPIED_FILE_PATH = path.resolve(PRJ_ROOT_PATH, '.index.html');
 
+process.env.NODE_ENV = 'production';
+
 const prerender = async () => {
   /**
    *
